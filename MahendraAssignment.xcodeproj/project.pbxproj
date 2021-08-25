@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		805FFCB426D623E6006E45E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCB326D623E6006E45E9 /* AppDelegate.swift */; };
 		805FFCB626D623E6006E45E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCB526D623E6006E45E9 /* SceneDelegate.swift */; };
-		805FFCB826D623E6006E45E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCB726D623E6006E45E9 /* ViewController.swift */; };
 		805FFCBB26D623E6006E45E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805FFCB926D623E6006E45E9 /* Main.storyboard */; };
 		805FFCBE26D623E6006E45E9 /* MahendraAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCBC26D623E6006E45E9 /* MahendraAssignment.xcdatamodeld */; };
 		805FFCC026D623E9006E45E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805FFCBF26D623E9006E45E9 /* Assets.xcassets */; };
 		805FFCC326D623E9006E45E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805FFCC126D623E9006E45E9 /* LaunchScreen.storyboard */; };
 		805FFCCE26D623EA006E45E9 /* MahendraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCCD26D623EA006E45E9 /* MahendraAssignmentTests.swift */; };
 		805FFCD926D623EA006E45E9 /* MahendraAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCD826D623EA006E45E9 /* MahendraAssignmentUITests.swift */; };
+		805FFCFB26D627B3006E45E9 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCFA26D627B3006E45E9 /* CaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		805FFCB026D623E6006E45E9 /* MahendraAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MahendraAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		805FFCB326D623E6006E45E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		805FFCB526D623E6006E45E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		805FFCB726D623E6006E45E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		805FFCBA26D623E6006E45E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		805FFCBD26D623E6006E45E9 /* MahendraAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MahendraAssignment.xcdatamodel; sourceTree = "<group>"; };
 		805FFCBF26D623E9006E45E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		805FFCD426D623EA006E45E9 /* MahendraAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MahendraAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		805FFCD826D623EA006E45E9 /* MahendraAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahendraAssignmentUITests.swift; sourceTree = "<group>"; };
 		805FFCDA26D623EA006E45E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		805FFCFA26D627B3006E45E9 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +101,11 @@
 		805FFCB226D623E6006E45E9 /* MahendraAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				805FFCF926D62677006E45E9 /* App */,
+				805FFCF826D6264F006E45E9 /* CaseA */,
+				805FFCF426D625E3006E45E9 /* CaseB */,
 				805FFCB326D623E6006E45E9 /* AppDelegate.swift */,
 				805FFCB526D623E6006E45E9 /* SceneDelegate.swift */,
-				805FFCB726D623E6006E45E9 /* ViewController.swift */,
 				805FFCB926D623E6006E45E9 /* Main.storyboard */,
 				805FFCBF26D623E9006E45E9 /* Assets.xcassets */,
 				805FFCC126D623E9006E45E9 /* LaunchScreen.storyboard */,
@@ -129,6 +131,28 @@
 				805FFCDA26D623EA006E45E9 /* Info.plist */,
 			);
 			path = MahendraAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		805FFCF426D625E3006E45E9 /* CaseB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CaseB;
+			sourceTree = "<group>";
+		};
+		805FFCF826D6264F006E45E9 /* CaseA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CaseA;
+			sourceTree = "<group>";
+		};
+		805FFCF926D62677006E45E9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				805FFCFA26D627B3006E45E9 /* CaseViewController.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				805FFCBE26D623E6006E45E9 /* MahendraAssignment.xcdatamodeld in Sources */,
-				805FFCB826D623E6006E45E9 /* ViewController.swift in Sources */,
 				805FFCB426D623E6006E45E9 /* AppDelegate.swift in Sources */,
+				805FFCFB26D627B3006E45E9 /* CaseViewController.swift in Sources */,
 				805FFCB626D623E6006E45E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mahendraVishwakarma.MahendraAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = "mahendraVishwakarma.OCT-Remider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mahendraVishwakarma.MahendraAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = "mahendraVishwakarma.OCT-Remider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
