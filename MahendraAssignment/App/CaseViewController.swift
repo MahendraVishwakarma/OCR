@@ -15,5 +15,13 @@ class CaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func caseA(_ sender: Any) {
+        guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "EventsViewController") else { return  }
+        self.navigationController?.pushViewController(obj, animated: true)
+    }
+    
+    @IBAction func caseB(_ sender: Any) {
+        guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController") else { return  }
+        self.navigationController?.pushViewController(obj, animated: true)
+    }
 }

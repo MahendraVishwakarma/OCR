@@ -16,6 +16,17 @@
 		805FFCCE26D623EA006E45E9 /* MahendraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCCD26D623EA006E45E9 /* MahendraAssignmentTests.swift */; };
 		805FFCD926D623EA006E45E9 /* MahendraAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCD826D623EA006E45E9 /* MahendraAssignmentUITests.swift */; };
 		805FFCFB26D627B3006E45E9 /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFCFA26D627B3006E45E9 /* CaseViewController.swift */; };
+		805FFD0426D64F5F006E45E9 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD0226D64F5F006E45E9 /* EventsViewController.swift */; };
+		805FFD0F26D64F9D006E45E9 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD0E26D64F9D006E45E9 /* EventViewModel.swift */; };
+		805FFD1526D64FD3006E45E9 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD1426D64FD3006E45E9 /* EventModel.swift */; };
+		805FFD2426D65751006E45E9 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD2326D65751006E45E9 /* AddEventViewController.swift */; };
+		805FFD2926D65773006E45E9 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD2826D65773006E45E9 /* AddEventViewModel.swift */; };
+		805FFD2E26D65782006E45E9 /* AddEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD2D26D65782006E45E9 /* AddEventsModel.swift */; };
+		805FFD4D26D66D94006E45E9 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD4B26D66D94006E45E9 /* DatePickerViewController.swift */; };
+		805FFD4E26D66D94006E45E9 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805FFD4C26D66D94006E45E9 /* DatePickerViewController.xib */; };
+		805FFD5626D67F99006E45E9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD5526D67F98006E45E9 /* BaseViewController.swift */; };
+		805FFD5D26D68AB6006E45E9 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */; };
+		805FFD5E26D68AB6006E45E9 /* EventListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,19 @@
 		805FFCD826D623EA006E45E9 /* MahendraAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MahendraAssignmentUITests.swift; sourceTree = "<group>"; };
 		805FFCDA26D623EA006E45E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		805FFCFA26D627B3006E45E9 /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		805FFD0226D64F5F006E45E9 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		805FFD0E26D64F9D006E45E9 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		805FFD1426D64FD3006E45E9 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		805FFD2326D65751006E45E9 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		805FFD2826D65773006E45E9 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		805FFD2D26D65782006E45E9 /* AddEventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddEventsModel.swift; path = MahendraAssignment/CaseA/AddEvent/ViewModel/AddEventsModel.swift; sourceTree = SOURCE_ROOT; };
+		805FFD3226D65F36006E45E9 /* Events+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataClass.swift"; sourceTree = "<group>"; };
+		805FFD3326D65F36006E45E9 /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		805FFD4B26D66D94006E45E9 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		805FFD4C26D66D94006E45E9 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		805FFD5526D67F98006E45E9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
+		805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +167,8 @@
 		805FFCF826D6264F006E45E9 /* CaseA */ = {
 			isa = PBXGroup;
 			children = (
+				805FFD1F26D6571A006E45E9 /* AddEvent */,
+				805FFD0026D64F0F006E45E9 /* Events */,
 			);
 			path = CaseA;
 			sourceTree = "<group>";
@@ -151,8 +177,83 @@
 			isa = PBXGroup;
 			children = (
 				805FFCFA26D627B3006E45E9 /* CaseViewController.swift */,
+				805FFD5526D67F98006E45E9 /* BaseViewController.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		805FFD0026D64F0F006E45E9 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD1326D64FAB006E45E9 /* Model */,
+				805FFD0D26D64F84006E45E9 /* View Model */,
+				805FFD0C26D64F6D006E45E9 /* View */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		805FFD0C26D64F6D006E45E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD0226D64F5F006E45E9 /* EventsViewController.swift */,
+				805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */,
+				805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		805FFD0D26D64F84006E45E9 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD0E26D64F9D006E45E9 /* EventViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		805FFD1326D64FAB006E45E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD1426D64FD3006E45E9 /* EventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		805FFD1F26D6571A006E45E9 /* AddEvent */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD2226D6573B006E45E9 /* Model */,
+				805FFD2126D65733006E45E9 /* ViewModel */,
+				805FFD2026D6572C006E45E9 /* View */,
+			);
+			path = AddEvent;
+			sourceTree = "<group>";
+		};
+		805FFD2026D6572C006E45E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD2326D65751006E45E9 /* AddEventViewController.swift */,
+				805FFD4B26D66D94006E45E9 /* DatePickerViewController.swift */,
+				805FFD4C26D66D94006E45E9 /* DatePickerViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		805FFD2126D65733006E45E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD2826D65773006E45E9 /* AddEventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		805FFD2226D6573B006E45E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD3226D65F36006E45E9 /* Events+CoreDataClass.swift */,
+				805FFD3326D65F36006E45E9 /* Events+CoreDataProperties.swift */,
+				805FFD2D26D65782006E45E9 /* AddEventsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805FFD4E26D66D94006E45E9 /* DatePickerViewController.xib in Resources */,
 				805FFCC326D623E9006E45E9 /* LaunchScreen.storyboard in Resources */,
 				805FFCC026D623E9006E45E9 /* Assets.xcassets in Resources */,
 				805FFCBB26D623E6006E45E9 /* Main.storyboard in Resources */,
+				805FFD5E26D68AB6006E45E9 /* EventListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +388,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805FFD5D26D68AB6006E45E9 /* EventListTableViewCell.swift in Sources */,
+				805FFD2E26D65782006E45E9 /* AddEventsModel.swift in Sources */,
 				805FFCBE26D623E6006E45E9 /* MahendraAssignment.xcdatamodeld in Sources */,
+				805FFD2426D65751006E45E9 /* AddEventViewController.swift in Sources */,
+				805FFD0F26D64F9D006E45E9 /* EventViewModel.swift in Sources */,
+				805FFD4D26D66D94006E45E9 /* DatePickerViewController.swift in Sources */,
+				805FFD5626D67F99006E45E9 /* BaseViewController.swift in Sources */,
 				805FFCB426D623E6006E45E9 /* AppDelegate.swift in Sources */,
 				805FFCFB26D627B3006E45E9 /* CaseViewController.swift in Sources */,
+				805FFD1526D64FD3006E45E9 /* EventModel.swift in Sources */,
 				805FFCB626D623E6006E45E9 /* SceneDelegate.swift in Sources */,
+				805FFD0426D64F5F006E45E9 /* EventsViewController.swift in Sources */,
+				805FFD2926D65773006E45E9 /* AddEventViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
