@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app will use phot</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app will use camera</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>The app uses reminders to help you stay on track.</string>
 	<key>CFBundleDevelopmentRegion</key>

@@ -28,6 +28,9 @@
 		805FFD5D26D68AB6006E45E9 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */; };
 		805FFD5E26D68AB6006E45E9 /* EventListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */; };
 		805FFD7426D7453A006E45E9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD7326D7453A006E45E9 /* Utilities.swift */; };
+		80EAF7B926D7F9C600A97EF8 /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAF7B826D7F9C600A97EF8 /* OCRViewController.swift */; };
+		80EAF7BE26D7F9DC00A97EF8 /* ORCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAF7BD26D7F9DC00A97EF8 /* ORCViewModel.swift */; };
+		80EAF7C326D7F9EC00A97EF8 /* OCRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAF7C226D7F9EC00A97EF8 /* OCRModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
 		805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListTableViewCell.xib; sourceTree = "<group>"; };
 		805FFD7326D7453A006E45E9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		80EAF7B826D7F9C600A97EF8 /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
+		80EAF7BD26D7F9DC00A97EF8 /* ORCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ORCViewModel.swift; sourceTree = "<group>"; };
+		80EAF7C226D7F9EC00A97EF8 /* OCRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 		805FFCF426D625E3006E45E9 /* CaseB */ = {
 			isa = PBXGroup;
 			children = (
+				80EAF7B426D7F97500A97EF8 /* Home */,
 			);
 			path = CaseB;
 			sourceTree = "<group>";
@@ -265,6 +272,40 @@
 				805FFD7326D7453A006E45E9 /* Utilities.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		80EAF7B426D7F97500A97EF8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				80EAF7B726D7F99C00A97EF8 /* Model */,
+				80EAF7B626D7F99200A97EF8 /* Viewmodel */,
+				80EAF7B526D7F98B00A97EF8 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		80EAF7B526D7F98B00A97EF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80EAF7B826D7F9C600A97EF8 /* OCRViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80EAF7B626D7F99200A97EF8 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				80EAF7BD26D7F9DC00A97EF8 /* ORCViewModel.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		80EAF7B726D7F99C00A97EF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80EAF7C226D7F9EC00A97EF8 /* OCRModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,12 +448,15 @@
 				805FFD0F26D64F9D006E45E9 /* EventViewModel.swift in Sources */,
 				805FFD4D26D66D94006E45E9 /* DatePickerViewController.swift in Sources */,
 				805FFD5626D67F99006E45E9 /* BaseViewController.swift in Sources */,
+				80EAF7B926D7F9C600A97EF8 /* OCRViewController.swift in Sources */,
 				805FFCB426D623E6006E45E9 /* AppDelegate.swift in Sources */,
 				805FFCFB26D627B3006E45E9 /* CaseViewController.swift in Sources */,
 				805FFD1526D64FD3006E45E9 /* EventModel.swift in Sources */,
 				805FFCB626D623E6006E45E9 /* SceneDelegate.swift in Sources */,
+				80EAF7BE26D7F9DC00A97EF8 /* ORCViewModel.swift in Sources */,
 				805FFD0426D64F5F006E45E9 /* EventsViewController.swift in Sources */,
 				805FFD2926D65773006E45E9 /* AddEventViewModel.swift in Sources */,
+				80EAF7C326D7F9EC00A97EF8 /* OCRModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

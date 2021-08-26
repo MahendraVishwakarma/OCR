@@ -21,7 +21,7 @@ class CaseViewController: UIViewController {
     }
     
     @IBAction func caseB(_ sender: Any) {
-        guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController") else { return  }
+        guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "OCRViewController") else { return  }
         self.navigationController?.pushViewController(obj, animated: true)
     }
 }
