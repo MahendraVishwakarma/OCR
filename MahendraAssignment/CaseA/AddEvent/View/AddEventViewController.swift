@@ -13,6 +13,7 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var descriptionView: UITextView!
     var viewModel: AddEventViewModel?
+    
     @IBOutlet weak var txtDatePicker: UITextField!
     let datePicker = UIDatePicker()
     
@@ -24,9 +25,14 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
     
     func showDatePicker(){
         //Formate Date
-        datePicker.datePickerMode = .date
+        datePicker.datePickerMode = .dateAndTime
         datePicker.backgroundColor = .white
-        datePicker.preferredDatePickerStyle = .wheels
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+           
+        }
         datePicker.minimumDate = Date()
         
         
@@ -50,6 +56,7 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         let eventDate =  formatter.string(from: datePicker.date)
         txtDatePicker.text = eventDate
         viewModel?.event?.date = eventDate
+        viewModel?.event?.eventDate = datePicker.date
         self.view.endEditing(true)
     }
     
@@ -65,7 +72,7 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         txtTitle.delegate = self
         descriptionView.layer.borderWidth = 0.5
         descriptionView.layer.borderColor = UIColor.black.cgColor
-        viewModel = AddEventViewModel()
+       // viewModel = AddEventViewModel()
     }
     @IBAction func addEvent(_ sender: Any) {
         if((txtTitle.text?.count ?? 0) <= 0) {
@@ -79,7 +86,9 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         viewModel?.event?.title =  txtTitle.text
         viewModel?.event?.eventDescription = descriptionView.text ?? ""
         viewModel?.addEventInLocalStorage()
-        viewModel?.setReminderInSystem()
+        viewModel?.askForPermission(grantedAction: {
+            print("permission")
+        })
     }
     
     @IBAction func openCalender(_ sender: Any) {

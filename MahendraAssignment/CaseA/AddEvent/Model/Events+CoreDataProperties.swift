@@ -19,6 +19,7 @@ extension Events {
     @NSManaged public var title: String?
     @NSManaged public var event_description: String?
     @NSManaged public var date: String?
+    @NSManaged public var action: String?
 
 }
 

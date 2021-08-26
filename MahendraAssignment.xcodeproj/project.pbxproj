@@ -27,6 +27,7 @@
 		805FFD5626D67F99006E45E9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD5526D67F98006E45E9 /* BaseViewController.swift */; };
 		805FFD5D26D68AB6006E45E9 /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */; };
 		805FFD5E26D68AB6006E45E9 /* EventListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */; };
+		805FFD7426D7453A006E45E9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805FFD7326D7453A006E45E9 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		805FFD5526D67F98006E45E9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		805FFD5B26D68AB6006E45E9 /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
 		805FFD5C26D68AB6006E45E9 /* EventListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListTableViewCell.xib; sourceTree = "<group>"; };
+		805FFD7326D7453A006E45E9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		805FFCB226D623E6006E45E9 /* MahendraAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				805FFD7226D7451F006E45E9 /* Utils */,
 				805FFCF926D62677006E45E9 /* App */,
 				805FFCF826D6264F006E45E9 /* CaseA */,
 				805FFCF426D625E3006E45E9 /* CaseB */,
@@ -254,6 +257,14 @@
 				805FFD2D26D65782006E45E9 /* AddEventsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		805FFD7226D7451F006E45E9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				805FFD7326D7453A006E45E9 /* Utilities.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +401,7 @@
 			files = (
 				805FFD5D26D68AB6006E45E9 /* EventListTableViewCell.swift in Sources */,
 				805FFD2E26D65782006E45E9 /* AddEventsModel.swift in Sources */,
+				805FFD7426D7453A006E45E9 /* Utilities.swift in Sources */,
 				805FFCBE26D623E6006E45E9 /* MahendraAssignment.xcdatamodeld in Sources */,
 				805FFD2426D65751006E45E9 /* AddEventViewController.swift in Sources */,
 				805FFD0F26D64F9D006E45E9 /* EventViewModel.swift in Sources */,
@@ -578,6 +590,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MahendraAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +609,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MahendraAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

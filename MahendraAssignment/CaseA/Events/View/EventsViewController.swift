@@ -29,8 +29,30 @@ class EventsViewController: BaseViewController {
     }
     
     @IBAction func addEvent() {
-        guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController") else { return  }
-        self.navigationController?.pushViewController(obj, animated: true)
+        let alert = UIAlertController(title: "Choose Action type", message: "please select one", preferredStyle: .actionSheet)
+        let event = UIAlertAction(title: "Event", style: .default) { (alt) in
+            alert.dismiss(animated: true, completion: nil)
+            
+            guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController") as? AddEventViewController  else { return  }
+            obj.viewModel = AddEventViewModel()
+            obj.viewModel?.actionType = .event
+            self.navigationController?.pushViewController(obj, animated: true)
+        }
+        let reminder = UIAlertAction(title: "Reminder", style: .default) { (alt) in
+            alert.dismiss(animated: true, completion: nil)
+            
+            guard let obj = self.storyboard?.instantiateViewController(withIdentifier: "AddEventViewController") as? AddEventViewController else { return  }
+            obj.viewModel = AddEventViewModel()
+            obj.viewModel?.actionType = .reminder
+            self.navigationController?.pushViewController(obj, animated: true)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(event)
+        alert.addAction(reminder)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
 
 }

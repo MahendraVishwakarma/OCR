@@ -10,5 +10,6 @@ import Foundation
 struct EventModel {
     var title:String?
     var date:String?
+    var eventDate:Date?
     var eventDescription:String?
 }
