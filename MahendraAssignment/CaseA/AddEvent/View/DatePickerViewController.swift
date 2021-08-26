@@ -21,9 +21,9 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction func setDateButton(_ sender: Any) {
-         let date = datepicker.date
-         delegate?.updateEvent(eventDate:date)
-        self.dismiss(animated: true, completion: nil)
+         //let date = datepicker.date
+         //delegate?.updateEvent(eventName:date)
+       // self.dismiss(animated: true, completion: nil)
     }
     
 }

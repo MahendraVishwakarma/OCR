@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6E81F0F7-7A05-45D8-991A-E3B230A0CD50"
+            uuid = "C50942FD-B215-4386-97A3-57A80214EC84"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MahendraAssignment/CaseA/AddEvent/ViewModel/AddEventViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "setReminderInSystem()"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "deleteAction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

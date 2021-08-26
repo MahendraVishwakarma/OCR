@@ -20,6 +20,7 @@ extension Events {
     @NSManaged public var event_description: String?
     @NSManaged public var date: String?
     @NSManaged public var action: String?
+    @NSManaged public var actionID:String?
 
 }
 

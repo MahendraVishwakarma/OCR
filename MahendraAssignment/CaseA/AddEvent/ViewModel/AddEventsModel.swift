@@ -11,5 +11,9 @@ struct EventModel {
     var title:String?
     var date:String?
     var eventDate:Date?
+    var eventID:String?
     var eventDescription:String?
+    init() {
+        
+    }
 }

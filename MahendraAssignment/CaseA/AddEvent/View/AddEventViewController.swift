@@ -11,6 +11,8 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtTitle: UITextField!
     
+    @IBOutlet weak var btnAddEvent: UIButton!
+    @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var descriptionView: UITextView!
     var viewModel: AddEventViewModel?
     
@@ -21,8 +23,14 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setViewProps()
         showDatePicker()
+        setDefaultValue()
     }
-    
+    private func setDefaultValue() {
+        
+        txtTitle.text = viewModel?.event?.title
+        descriptionView.text = viewModel?.event?.eventDescription
+        txtDatePicker.text = viewModel?.event?.date
+    }
     func showDatePicker(){
         //Formate Date
         datePicker.datePickerMode = .dateAndTime
@@ -52,7 +60,9 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy ⏰ hh:MM:ss"
+        formatter.dateFormat = "dd-MM-yyyy ⏰ hh:mm a"
+        formatter.timeZone = TimeZone.current
+        formatter.locale = Locale.current
         let eventDate =  formatter.string(from: datePicker.date)
         txtDatePicker.text = eventDate
         viewModel?.event?.date = eventDate
@@ -66,6 +76,17 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
     
     
     private func setViewProps() {
+        if(viewModel?.actionType != .update) {
+            btnDelete.isHidden = true
+        }else {
+            btnDelete.isHidden = false
+            btnAddEvent.setTitle("Update", for: .normal)
+        }
+        if(viewModel?.actionType == .event) {
+            btnDelete.setTitle("Delete Event", for: .normal)
+        }else if(viewModel?.actionType == .reminder) {
+            btnDelete.setTitle("Delete Reminder", for: .normal)
+        }
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -85,17 +106,19 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         }
         viewModel?.event?.title =  txtTitle.text
         viewModel?.event?.eventDescription = descriptionView.text ?? ""
-        viewModel?.addEventInLocalStorage()
-        viewModel?.askForPermission(grantedAction: {
-            print("permission")
-        })
+        if(viewModel?.actionType == .update) {
+            viewModel?.doAction(action: "update")
+        }else if(viewModel?.actionType == .event) {
+            viewModel?.doAction(action: "addEvent")
+        }else if(viewModel?.actionType == .reminder) {
+            viewModel?.doAction(action: "addReminder")
+        }
+       
+        
     }
     
-    @IBAction func openCalender(_ sender: Any) {
-        //let obj = DatePickerViewController(nibName:"DatePickerViewController",bundle: nil)
-        //obj.modalPresentationStyle = .fullScreen
-        //self.present(obj, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(obj, animated: true)
+    @IBAction func btnDeleteEvent(_ sender: Any) {
+        viewModel?.doAction(action: "deleteEvent")
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -103,4 +126,17 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         return true
     }
     
+}
+extension AddEventViewController: EventAction {
+    func updateEvent(eventName: String) {
+        switch eventName {
+        case "goback":
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+        default:
+            break
+        }
+    }
 }

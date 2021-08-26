@@ -10,4 +10,5 @@ import Foundation
 enum ActionTypes {
     case event
     case reminder
+    case update
 }

@@ -12,6 +12,7 @@ class EventListTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var evenetDescr: UILabel!
+    @IBOutlet weak var eventType: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,8 +28,9 @@ class EventListTableViewCell: UITableViewCell {
         let titleValue = event?.value(forKeyPath: "title") as? String
         let dateValue = event?.value(forKeyPath: "date") as? String
         let det = event?.value(forKeyPath: "event_description") as? String
+        let actionTypeValue = event?.value(forKeyPath: "action") as? String
         title?.text = titleValue
-       
+        eventType.text = actionTypeValue
         date?.text = dateValue
         evenetDescr?.text = det
     }

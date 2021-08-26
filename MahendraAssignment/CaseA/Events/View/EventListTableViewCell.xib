@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +24,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTg-1i-V4H">
-                        <rect key="frame" x="15" y="49" width="399" height="21"/>
+                        <rect key="frame" x="15" y="49" width="32.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iph-Ax-Rez">
+                        <rect key="frame" x="378" y="50" width="40.5" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,22 +43,24 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Iph-Ax-Rez" secondAttribute="trailing" constant="10.5" id="4Xa-nk-GSi"/>
                     <constraint firstItem="UTg-1i-V4H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8Eo-YA-gA7"/>
                     <constraint firstItem="ZRp-Mn-yav" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8G5-cN-BZD"/>
                     <constraint firstAttribute="bottom" secondItem="ZRp-Mn-yav" secondAttribute="bottom" constant="6" id="8ii-Pp-2Xg"/>
                     <constraint firstItem="iCF-a8-4vU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Av2-KS-AbE"/>
-                    <constraint firstAttribute="trailing" secondItem="UTg-1i-V4H" secondAttribute="trailing" constant="15" id="Dgs-gG-nWw"/>
                     <constraint firstItem="iCF-a8-4vU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JHV-7n-pp8"/>
                     <constraint firstAttribute="trailing" secondItem="ZRp-Mn-yav" secondAttribute="trailing" constant="15" id="LgP-Ap-5dL"/>
                     <constraint firstItem="UTg-1i-V4H" firstAttribute="top" secondItem="iCF-a8-4vU" secondAttribute="bottom" constant="10" id="MIK-CW-GqH"/>
                     <constraint firstItem="ZRp-Mn-yav" firstAttribute="top" secondItem="UTg-1i-V4H" secondAttribute="bottom" constant="5" id="Ucd-w0-voH"/>
                     <constraint firstAttribute="trailing" secondItem="iCF-a8-4vU" secondAttribute="trailing" constant="15" id="bRb-vA-Bdz"/>
+                    <constraint firstItem="Iph-Ax-Rez" firstAttribute="centerY" secondItem="UTg-1i-V4H" secondAttribute="centerY" id="xbm-mo-KUG"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="date" destination="UTg-1i-V4H" id="EuP-Z8-tfj"/>
                 <outlet property="evenetDescr" destination="ZRp-Mn-yav" id="77i-H3-5TD"/>
+                <outlet property="eventType" destination="Iph-Ax-Rez" id="IjP-PO-hlQ"/>
                 <outlet property="title" destination="iCF-a8-4vU" id="iDZ-JC-aT2"/>
             </connections>
             <point key="canvasLocation" x="-67.391304347826093" y="84.709821428571431"/>
