@@ -63,10 +63,12 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
         formatter.dateFormat = "dd-MM-yyyy ⏰ hh:mm a"
         formatter.timeZone = TimeZone.current
         formatter.locale = Locale.current
-        let eventDate =  formatter.string(from: datePicker.date)
-        txtDatePicker.text = eventDate
-        viewModel?.event?.date = eventDate
+        let eventDateStr =  formatter.string(from: datePicker.date)
+       
+        txtDatePicker.text = eventDateStr
+        viewModel?.event?.date = eventDateStr
         viewModel?.event?.eventDate = datePicker.date
+        print(datePicker.date)
         self.view.endEditing(true)
     }
     
@@ -118,7 +120,16 @@ class AddEventViewController: BaseViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnDeleteEvent(_ sender: Any) {
-        viewModel?.doAction(action: "deleteEvent")
+       
+        if(viewModel?.actionType == .update) {
+            let actionTypeValue = viewModel?.eventObj?.value(forKeyPath: "action") as? String
+            if(actionTypeValue == "event") {
+                viewModel?.doAction(action: "deleteEvent")
+            }else {
+                viewModel?.doAction(action: "deleteReminder")
+            }
+            
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -28,9 +28,9 @@ class AddEventViewModel {
         }else if(actionType == .reminder) {
             self.setReminderInSystem()
         }else if(action == "deleteEvent") {
-            self.deleteAction()
+            self.deleteAction(deleteName: "event")
         }else if(action == "deleteReminder") {
-           // self.deleteAction()
+            self.deleteAction(deleteName: "reminder")
         }else if(action == "update") {
             if let evnt = eventObj {
                 self.updateEvents(eventData: evnt)
@@ -62,18 +62,30 @@ class AddEventViewModel {
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        
-       managedContext.delete(eventObj)
+        managedContext.delete(eventObj)
         
     }
     private func goBack(){
         delegate?.updateEvent(eventName: "goback")
     }
-    private func deleteAction(){
-        if let eventDelete = self.store?.event(withIdentifier: event?.eventID ?? "") {
-            try? self.store?.remove(eventDelete, span: .thisEvent, commit: true)
-            
+    private func deleteAction(deleteName:String){
+        if(deleteName == "event") {
+            if let eventDelete = self.store?.event(withIdentifier: event?.eventID ?? "") {
+                try? self.store?.remove(eventDelete, span: .thisEvent, commit: true)
+                
+            }
+        }else if(deleteName == "reminder") {
+            if let reminder = self.store?.calendarItem(withIdentifier: event?.eventID ?? "") as? EKReminder {
+                do{
+                    try store?.remove(reminder, commit: true)
+                    
+                }catch{
+                    print("An error occurred while removing the reminder from the Calendar database: \(error)")
+                }
+                
+            }
         }
+        
         if let obj = eventObj {
             self.deleteEventfromLocalStorage(eventObj: obj)
         }
@@ -92,10 +104,74 @@ class AddEventViewModel {
             eventData.title = event?.title
             eventData.date = event?.date
             try managedContext.save()
+            let actionTypeValue = eventObj?.value(forKeyPath: "action") as? String
+            if(actionTypeValue == "Event") {
+                self.updateEventInfo()
+            }else if(actionTypeValue == "Reminder") {
+                self.upddateReminder()
+            }
             self.goBack()
         }catch{
             
         }
+    }
+    private func upddateReminder(){
+       
+        
+        let reminder = self.store?.calendarItem(withIdentifier: event?.eventID ?? "") as? EKReminder
+        //let reminder = EKReminder(eventStore: str)
+        
+        reminder?.title = self.event?.title
+        reminder?.notes = self.event?.eventDescription
+        reminder?.priority = 2
+        
+        if let dueDate = self.event?.eventDate {
+            //reminder.completionDate = dueDate
+            let calender = Calendar.current
+           
+            reminder?.dueDateComponents = calender.dateComponents([.year, .month, .day, .hour,.minute,.second], from: dueDate)
+           
+            
+        }
+        do {
+            if let rem = reminder {
+                try self.store?.save(rem, commit: true)
+            }
+            
+        }catch(let error){
+            print(error.localizedDescription)
+        }
+    }
+    private func updateEventInfo() {
+        
+        let eventObj =  self.store?.event(withIdentifier: event?.eventID ?? "")
+        eventObj?.title = self.event?.title
+        eventObj?.notes = self.event?.eventDescription
+        let calender = Calendar.current
+       
+        
+        if let dueDate = self.event?.eventDate {
+            
+            eventObj?.startDate = dueDate
+            eventObj?.endDate = dueDate
+            if let alarmTime = calender.date(byAdding: .minute, value: -2, to: dueDate) {
+                let alarm2 = EKAlarm(absoluteDate: alarmTime)
+                eventObj?.addAlarm(alarm2)
+            }
+        }
+        do {
+            if let str = store, let ent = eventObj {
+                try str.save(ent, span: .thisEvent)
+            }
+            
+        
+            print("events added with dates:")
+        } catch let e as NSError {
+            print(e.description)
+            return
+        }
+        print("Saved Event")
+        
     }
     private func setReminderInSystem(){
         store?.requestAccess(to: .reminder) {[weak self] (granted, error) in
