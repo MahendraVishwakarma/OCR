@@ -140,12 +140,6 @@
                                     <constraint firstAttribute="height" constant="178" id="gdu-VW-wAs"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scanned text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-OR-e6Z">
-                                <rect key="frame" x="21" y="67" width="372" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbC-l1-Q76">
                                 <rect key="frame" x="132" y="466" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.078431372550000003" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,27 +155,47 @@
                                     <action selector="btnOCROperate:" destination="56v-7B-snQ" eventType="touchUpInside" id="7Mg-9m-esj"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Edt-Gz-Aym">
+                            <activityIndicatorView contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Edt-Gz-Aym">
                                 <rect key="frame" x="188.5" y="395.5" width="37" height="37"/>
                                 <color key="color" red="0.69244970029999997" green="0.078431372550000003" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-eI-9a0">
+                                <rect key="frame" x="20" y="65" width="374" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-OR-e6Z">
+                                        <rect key="frame" x="7" y="5" width="369" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yhb-OR-e6Z" secondAttribute="trailing" constant="7" id="1s2-mb-5Sk"/>
+                                    <constraint firstItem="yhb-OR-e6Z" firstAttribute="width" secondItem="Zzd-eI-9a0" secondAttribute="width" multiplier="2.39572" constant="-527" id="7h7-PZ-aSV"/>
+                                    <constraint firstItem="yhb-OR-e6Z" firstAttribute="top" secondItem="Zzd-eI-9a0" secondAttribute="top" constant="5" id="XiS-SD-leK"/>
+                                    <constraint firstAttribute="bottom" secondItem="yhb-OR-e6Z" secondAttribute="bottom" constant="99.5" id="bHr-04-Xny"/>
+                                    <constraint firstAttribute="height" constant="200" id="byc-8z-HMb"/>
+                                    <constraint firstItem="yhb-OR-e6Z" firstAttribute="leading" secondItem="Zzd-eI-9a0" secondAttribute="leading" constant="7" id="p4c-Vc-Jzb"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DQX-l0-Jdx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pcO-rS-2o6" firstAttribute="leading" secondItem="DQX-l0-Jdx" secondAttribute="leading" constant="35" id="0vh-oT-KFp"/>
+                            <constraint firstItem="DQX-l0-Jdx" firstAttribute="trailing" secondItem="Zzd-eI-9a0" secondAttribute="trailing" constant="20" id="2r6-hX-3hI"/>
                             <constraint firstItem="pcO-rS-2o6" firstAttribute="top" secondItem="gbC-l1-Q76" secondAttribute="bottom" constant="46" id="3yE-kf-hye"/>
+                            <constraint firstItem="Zzd-eI-9a0" firstAttribute="top" secondItem="DQX-l0-Jdx" secondAttribute="top" constant="21" id="Cjx-AQ-DP5"/>
                             <constraint firstItem="sNG-fF-Cn5" firstAttribute="top" secondItem="IK5-fT-HVh" secondAttribute="bottom" constant="13" id="Gy3-Qy-178"/>
-                            <constraint firstItem="yhb-OR-e6Z" firstAttribute="top" secondItem="DQX-l0-Jdx" secondAttribute="top" constant="23" id="Ias-9X-PTf"/>
                             <constraint firstItem="gbC-l1-Q76" firstAttribute="top" secondItem="Edt-Gz-Aym" secondAttribute="bottom" constant="33.5" id="LjE-8D-5uE"/>
                             <constraint firstItem="DQX-l0-Jdx" firstAttribute="trailing" secondItem="pcO-rS-2o6" secondAttribute="trailing" constant="35" id="OhD-oO-HDr"/>
                             <constraint firstItem="IK5-fT-HVh" firstAttribute="top" secondItem="pcO-rS-2o6" secondAttribute="bottom" constant="22.5" id="PVg-eq-W32"/>
                             <constraint firstItem="DQX-l0-Jdx" firstAttribute="bottom" secondItem="sNG-fF-Cn5" secondAttribute="bottom" constant="36" id="RJz-uT-SCG"/>
-                            <constraint firstItem="DQX-l0-Jdx" firstAttribute="trailing" secondItem="yhb-OR-e6Z" secondAttribute="trailing" constant="21" id="Z0S-yO-gfo"/>
+                            <constraint firstItem="Zzd-eI-9a0" firstAttribute="leading" secondItem="DQX-l0-Jdx" secondAttribute="leading" constant="20" id="Ryl-w5-MVC"/>
+                            <constraint firstItem="Zzd-eI-9a0" firstAttribute="centerX" secondItem="DQX-l0-Jdx" secondAttribute="centerX" id="UHx-mF-ldg"/>
                             <constraint firstItem="Edt-Gz-Aym" firstAttribute="centerX" secondItem="YE7-G3-yhJ" secondAttribute="centerX" id="cYB-SZ-kXG"/>
                             <constraint firstItem="IK5-fT-HVh" firstAttribute="centerX" secondItem="YE7-G3-yhJ" secondAttribute="centerX" id="jFB-sd-Gj6"/>
                             <constraint firstItem="DQX-l0-Jdx" firstAttribute="trailing" secondItem="sNG-fF-Cn5" secondAttribute="trailing" constant="40" id="okA-Re-iYX"/>
-                            <constraint firstItem="yhb-OR-e6Z" firstAttribute="leading" secondItem="DQX-l0-Jdx" secondAttribute="leading" constant="21" id="tFA-cZ-Dzw"/>
                             <constraint firstItem="sNG-fF-Cn5" firstAttribute="leading" secondItem="DQX-l0-Jdx" secondAttribute="leading" constant="40" id="xqn-Ro-Dks"/>
                             <constraint firstItem="gbC-l1-Q76" firstAttribute="centerX" secondItem="YE7-G3-yhJ" secondAttribute="centerX" id="yZi-hU-OkC"/>
                         </constraints>
